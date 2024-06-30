@@ -1,19 +1,16 @@
-interface User {
-  name: string;
-  age: number;
-}
+import { User } from '../interfaces/user'
 
 export class MyDataBaseClassic {
-  private static instace: MyDataBaseClassic | null = null;
+  private static _instance: MyDataBaseClassic | null = null;
   private users: User[] = []
 
   private constructor() {}
 
-  public static getInstance(): MyDataBaseClassic {
-    if (MyDataBaseClassic.instace === null) {
-      MyDataBaseClassic.instace = new MyDataBaseClassic();
+  public static get instance(): MyDataBaseClassic {
+    if (MyDataBaseClassic._instance === null) {
+      MyDataBaseClassic._instance = new MyDataBaseClassic();
     }
-    return MyDataBaseClassic.instace
+    return MyDataBaseClassic._instance
   }
 
   add(user: User): void {
