@@ -1,7 +1,7 @@
 import { User } from '../interfaces/user'
 
 
- const users: User[] = []
+const users: User[] = []
 
 export const MyDataBaseModule = {
   add(user: User): void {

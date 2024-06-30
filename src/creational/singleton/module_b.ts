@@ -1,10 +1,10 @@
-import { MyDataBaseModule } from './db/my-database-module';
-import { myDataBaseModule as myDataBaseModuleFromA } from './module_a';
+import { MyDataBaseFunction } from './db/my-database-function';
+import { myDataBaseFunction as myDataBaseFunctionFromA } from './module_a';
 
 
-const myDataBaseModule = MyDataBaseModule;
-myDataBaseModule.add({ name: 'Manuel Gomes', age: 30});
-myDataBaseModule.add({ name: 'Tiringa', age: 75});
-myDataBaseModule.show();
+const myDataBaseFunction = MyDataBaseFunction;
+myDataBaseFunction.add({ name: 'Manuel Gomes', age: 30});
+myDataBaseFunction.add({ name: 'Tiringa', age: 75});
+myDataBaseFunction.show();
 
-console.log(myDataBaseModule === myDataBaseModuleFromA)
+console.log(myDataBaseFunction === myDataBaseFunctionFromA)
